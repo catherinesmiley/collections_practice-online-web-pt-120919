@@ -25,7 +25,7 @@ def kesha_maker(array)
     kesha_array = []
     array.each do |i| 
         i[2] = "$"
-        kesha_array << i
+        kesha_array.push(i)
     end 
     kesha_array
 end 
@@ -40,5 +40,5 @@ def sum_array(array)
 end 
 
 def add_s(array)
-    array.each_with_index.collect { |word, index| index == 1 ? word : word.push("s") }
+    array.each_with_index.collect { |word, index| index == 1 ? word : word + "s" }
 end 
